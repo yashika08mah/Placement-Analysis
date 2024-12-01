@@ -34,15 +34,6 @@ The dataset used in this project includes student information such as:
 
 The dataset contains features for predicting both placement status and salary.
 
-## Installation
-
-To run this project locally, follow these steps:
-
-1. Clone the repository:
-   git clone https://github.com/charans2702/Placement_Prediction_Using_Machine-Learning.git
-   
-2. Install the required packages:
-   pip install -r requirements.txt
 
 ## Project Structure
 
