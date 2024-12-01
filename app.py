@@ -1,14 +1,14 @@
 import numpy as np
-import model
+#import model
 from flask import Flask, request, render_template
 import pickle
-import model1
+#import model1
 app = Flask(__name__,template_folder="templates")
-model = pickle.load(open('model.pkl', 'rb'))
-model1 = pickle.load(open('model1.pkl','rb'))
+model = pickle.load(open('/Users/YashikaMahajan/Placement_Prediction_Using_Machine-Learning/model.pkl', 'rb'))
+model1 = pickle.load(open('/Users/YashikaMahajan/Placement_Prediction_Using_Machine-Learning/model1.pkl','rb'))
 @app.route('/')
 def h():
-    return render_template('h.html')
+    return render_template('home.html')
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -72,11 +72,11 @@ def predict():
     if(output=='Placed'):
         out = f'Congratualations {name} !! You have high chances of getting placed!!!'
         out2= f'Your Excepted Salary will be INR {k} per annum'
-        return render_template('out.html', output=out,output2=out2)
+        return render_template('output.html', output=out,output2=out2)
     else:
         out=f'Sorry {name} !! You have low chances of getting placed.All the best!!!!'
         out2='Improve your skills...'
-        return render_template('out.html', output=out,output2=out2)
+        return render_template('output.html', output=out,output2=out2)
      
 
 if __name__ == "__main__":
